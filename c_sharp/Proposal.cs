@@ -34,8 +34,12 @@ namespace c_sharp
 					default:
 						throw new ArgumentOutOfRangeException();
 				}
-			if (approvals > denials)
-				return ElectionResult.Success(Content, Constraints, objections);
+			return CreateCorrectElectionResult(approvals, denials, objections);
+		}
+
+		private ElectionResult CreateCorrectElectionResult(int approvals, int denials, List<string> objections)
+		{
+			if (approvals > denials) return ElectionResult.Success(Content, Constraints, objections);
 			return ElectionResult.Failure(this, objections);
 		}
 	}
