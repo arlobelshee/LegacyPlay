@@ -106,8 +106,11 @@
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Agreement.cs" />
+    <Compile Include="ElectionResult.cs" />
+    <Compile Include="Proposal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vote.cs" />
     <EmbeddedResource Include="Properties\c_sharp.rd.xml" />
   </ItemGroup>
   <ItemGroup>
